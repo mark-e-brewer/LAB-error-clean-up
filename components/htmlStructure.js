@@ -1,3 +1,5 @@
+import renderToDOM from '../utils/renderToDom';
+
 const htmlStructure = () => {
   const domString = `
     <div id="header-container" class="header mb-3"></div>

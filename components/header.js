@@ -1,3 +1,5 @@
+import renderToDOM from '../utils/renderToDom';
+
 const header = () => {
   const domString = `<div class="container">
     <h1>Welcome to Hoggy Hogwarts Sorting Hat!</h1>
