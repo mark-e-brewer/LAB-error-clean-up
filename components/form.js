@@ -1,4 +1,5 @@
-import renderToDOM from "../utils/renderToDom";
+import renderToDOM from '../utils/renderToDom';
+import sortStudent from '../utils/sortStudents';
 
 const form = () => {
   const domString = `<form id="sorting" class="d-flex flex-column form-floating ">

@@ -1,4 +1,5 @@
-import { voldysArmy, students } from "./sample_data/data";
+import { voldysArmy, students } from './sample_data/data';
+import studentsOnDom from '../components/studentCards';
 
 const events = () => {
   // target expel buttons to move to voldys army
@@ -16,5 +17,20 @@ const events = () => {
         studentsOnDom('#voldy', voldysArmy);
       }
     });
+
+  // target filter buttons on Dom
+  document.querySelector('#filter-container').addEventListener('click', (e) => {
+    if (e.target.id.includes('filter')) {
+      const [, house] = e.target.id.split('--');
+
+      if (house === 'all') {
+        studentsOnDom('#students', students);
+      } else if (house) {
+        const filter = students.filter((student) => student.house === house);
+        studentsOnDom('#students', filter, house);
+      }
+    }
+  });
+};
 
 export default events;

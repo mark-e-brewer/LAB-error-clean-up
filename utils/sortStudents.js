@@ -1,6 +1,6 @@
-import { houses, students } from '../utils/sample_data/data';
-import studentsOnDom from './studentCards';
-import createId from '../utils/createId';
+import { houses, students } from './sample_data/data';
+import studentsOnDom from '../components/studentCards';
+import createId from './createId';
 
 const sortStudent = (e) => {
   e.preventDefault();
