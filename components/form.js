@@ -1,5 +1,7 @@
 import renderToDOM from '../utils/renderToDom';
 import sortStudent from '../utils/sortStudents';
+import filterBtnRow from './filterBtnRow';
+import studentAreas from './studentAreas';
 
 const form = () => {
   const domString = `<form id="sorting" class="d-flex flex-column form-floating ">
@@ -20,5 +22,13 @@ const form = () => {
   // on form submit, sort student
   document.querySelector('#sorting').addEventListener('submit', sortStudent);
 };
+
+// get form on the DOM on button click
+document.querySelector('#start-sorting').addEventListener('click', () => {
+  // put html elements on the DOM on click
+  form(); // form
+  filterBtnRow(); // filter buttons
+  studentAreas(); // students and voldy's army divs
+});
 
 export default form;
