@@ -1,7 +1,7 @@
 import htmlStructure from '../components/htmlStructure';
 import header from '../components/header';
 import startSortingBtn from '../components/startSortingBtn';
-import events from './sample_data/data';
+import events from './events';
 
 const startApp = () => {
   htmlStructure(); // always load first
